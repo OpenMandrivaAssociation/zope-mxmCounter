@@ -1,23 +1,24 @@
-%define product		mxmCounter
-%define version		1.1.0
-%define release		4
+%define Product mxmCounter
+%define product mxmcounter
+%define name    zope-%{Product}
+%define version 1.1.0
+%define release %mkrel 5
 
 %define zope_minver	2.7
-
 %define zope_home	%{_prefix}/lib/zope
 %define software_home	%{zope_home}/lib/python
 
-Summary:	A simple filesystem based hit counter for Zope, CMF & Plone, for multiple pages
-Name:		zope-%{product}
+Name:		%{name}
 Version:	%{version}
-Release:	%mkrel %{release}
+Release:	%{release}
+Summary:	A simple filesystem based hit counter for Zope, CMF & Plone, for multiple pages
 License:	GPL
 Group:		System/Servers
-Source:		http://www.mxm.dk/products/public/mxmCounter/files/mxmCounter.%{version}.tar.bz2
 URL:		http://www.mxm.dk/products/public/mxmCounter/
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:	noarch
+Source:		http://www.mxm.dk/products/public/mxmCounter/files/mxmCounter.%{version}.tar.bz2
 Requires:	zope >= %{zope_minver}
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 A simple filesystem based hit counter for Zope, 
@@ -50,8 +51,5 @@ if [ -f "%{_prefix}/bin/zopectl" ] && [ "`%{_prefix}/bin/zopectl status`" != "da
 fi
 
 %files
-%defattr(0644, root, root, 0755)
+%defattr(-,root,root)
 %{software_home}/Products/*
-
-
-
