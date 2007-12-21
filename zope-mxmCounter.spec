@@ -18,6 +18,7 @@ URL:		http://www.mxm.dk/products/public/mxmCounter/
 Source:		http://www.mxm.dk/products/public/mxmCounter/files/mxmCounter.%{version}.tar.bz2
 Requires:	zope >= %{zope_minver}
 BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 A simple filesystem based hit counter for Zope, 
