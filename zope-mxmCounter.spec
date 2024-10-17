@@ -14,7 +14,7 @@ Release:	%{release}
 Summary:	A simple filesystem based hit counter for Zope, CMF & Plone, for multiple pages
 License:	GPL
 Group:		System/Servers
-URL:		http://www.mxm.dk/products/public/mxmCounter/
+URL:		https://www.mxm.dk/products/public/mxmCounter/
 Source:		http://www.mxm.dk/products/public/mxmCounter/files/mxmCounter.%{version}.tar.bz2
 Requires:	zope >= %{zope_minver}
 BuildArch:  noarch
